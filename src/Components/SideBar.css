@@ -22,7 +22,7 @@
 aside {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 200px;
     height: 100vh;
     background-color: #f5f5f5;
@@ -38,12 +38,17 @@ aside {
     box-shadow: 0 0 10px 10px #e3e3e3;
 }
 
+aside.hide {
+    left: -100%;
+}
+
 aside .clo-ope-aside-btn {
     display: none;
     position: fixed;
     top: 30px;
     right: 20px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 aside .clo-ope-aside-btn span {
@@ -52,16 +57,47 @@ aside .clo-ope-aside-btn span {
     height: 4px;
     background-color: var(--links-color);
     margin-block: 3px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transform: scaleX(.3);
+    transform-origin: left;
+    -webkit-transform: scaleX(.3);
+    -moz-transform: scaleX(.3);
+    -ms-transform: scaleX(.3);
+    -o-transform: scaleX(.3);
+    animation: WormMove 600ms ease-in-out infinite alternate;
+    -webkit-animation: WormMove 600ms ease-in-out infinite alternate;
 }
 
-aside.active {
-    left: 0;
+@keyframes WormMove {
+    0% {
+        transform: scaleX(.3);
+        -webkit-transform: scaleX(.3);
+        -moz-transform: scaleX(.3);
+        -ms-transform: scaleX(.3);
+        -o-transform: scaleX(.3);
+    }
+
+    100% {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+    }
 }
+
+aside .clo-ope-aside-btn span:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+aside .clo-ope-aside-btn span:nth-child(3) {
+    animation-delay: 400ms;
+}
+
 
 aside .userImage {
     max-width: 150px;

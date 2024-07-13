@@ -7,7 +7,7 @@ export default function SiderBar() {
     setActive(!isActive);
   }
   return (
-    <aside className={isActive ? "active" : ""}>
+    <aside className={isActive ? "hide" : ""}>
       <button className="clo-ope-aside-btn" onClick={handelActive}>
         <span></span>
         <span></span>
