@@ -13,7 +13,8 @@ export default function HomeBage() {
           Hi! <br />a Deigner
         </h1>
         <p>
-          100% html5 bootstrap templates Made <br /> By <a>Colorlib.com</a>
+          100% html5 bootstrap templates Made <br /> By
+          <a href="#">Colorlib.com</a>
         </p>
         <button>Download cv</button>
       </div>
