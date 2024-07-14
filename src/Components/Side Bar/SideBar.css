@@ -43,7 +43,7 @@ aside.hide {
 }
 
 aside .clo-ope-aside-btn {
-    display: block;
+    display: none;
     position: fixed;
     top: 30px;
     right: 20px;
@@ -194,9 +194,9 @@ aside ul li:hover::after {
 }
 
 @media (max-width:900px) {
-    /* aside .clo-ope-aside-btn {
+    aside .clo-ope-aside-btn {
         display: block;
-    } */
+    }
 
     aside {
         left: -100%;

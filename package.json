@@ -12,6 +12,11 @@
   "dependencies": {
     "@fontsource/playfair": "^5.0.5",
     "@fontsource/quicksand": "^5.0.18",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "display": "^0.2.0",
     "google-fonts": "^1.0.0",
     "react": "^18.3.1",

@@ -3,7 +3,7 @@ import profilePicture from "../../Images/about-BgAkqdr2.jpg";
 import "./SideBar.css";
 
 export default function SiderBar() {
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(true);
 
   function handelActive() {
     setActive(!isActive);
