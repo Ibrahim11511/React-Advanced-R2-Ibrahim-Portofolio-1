@@ -1,13 +1,29 @@
-import { useState } from "react";
-import profilePicture from "../Images/about-BgAkqdr2.jpg";
+import { useState, useEffect } from "react";
+import profilePicture from "../../Images/about-BgAkqdr2.jpg";
 import "./SideBar.css";
+
 export default function SiderBar() {
   const [isActive, setActive] = useState(false);
+
   function handelActive() {
     setActive(!isActive);
   }
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 900) {
+        setActive(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Check the initial window size
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <aside className={isActive ? "hide" : ""}>
+    <aside className={isActive ? "show" : "hide"}>
       <button className="clo-ope-aside-btn" onClick={handelActive}>
         <span></span>
         <span></span>
