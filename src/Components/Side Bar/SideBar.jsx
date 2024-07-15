@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import profilePicture from "../../Images/about-BgAkqdr2.jpg";
 import "./SideBar.css";
 
@@ -30,21 +31,21 @@ export default function SiderBar() {
 
       <ul>
         <li>
-          <a className="active" href="#">
+          <Link className="active" to={"home"}>
             home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">about</a>
+          <Link to={"about"}>about</Link>
         </li>
         <li>
-          <a href="#">skills</a>
+          <Link to={"skills"}>skills</Link>
         </li>
         <li>
-          <a href="#">EXPERIENCE</a>
+          <Link to={"experience"}>EXPERIENCE</Link>
         </li>
         <li>
-          <a href="#">work</a>
+          <Link to={"work"}>work</Link>
         </li>
       </ul>
     </aside>

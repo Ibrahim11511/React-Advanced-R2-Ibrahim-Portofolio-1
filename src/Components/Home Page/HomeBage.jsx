@@ -8,6 +8,7 @@ export default function HomeBage() {
   setInterval(() => {
     setActive(!isActive);
   }, 5000);
+
   return (
     <section className={`homePage ${isActive ? "first" : "second"}`}>
       <div className="firstPage">

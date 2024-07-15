@@ -40,6 +40,7 @@
 
 .about-page h1 {
     width: 100%;
+    height: fit-content;
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 3px;

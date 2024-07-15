@@ -1,17 +1,41 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import HomePage from "./Components/Home Page/HomeBage";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import SideBar from "./Components/Side Bar/SideBar";
-// import AboutPage from "./Components/About page/AboutPage";
-// import SkillingPage from "./Components/Skilling Page/SkillingPage";
+import MasterLayout from "./Components/MasterLayOut/MasterLayout";
 import "@fontsource/playfair";
 import "@fontsource/quicksand";
+import HomeBage from "./Components/Home Page/HomeBage";
+import AboutPage from "./Components/About page/AboutPage";
+import SkillsPage from "./Components/Skilling Page/SkillingPage";
+import NotFound from "./Components/Not Fount/NotFound";
 function App() {
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <MasterLayout />,
+      errorElement: <NotFound />,
+      children: [
+        {
+          index: true,
+          element: <HomeBage />,
+        },
+        {
+          path: "home",
+          element: <HomeBage />,
+        },
+        {
+          path: "about",
+          element: <AboutPage />,
+        },
+        {
+          path: "skills",
+          element: <SkillsPage />,
+        },
+      ],
+    },
+  ]);
   return (
     <>
-      <SideBar />
-      <HomePage />
+      <RouterProvider router={routes}></RouterProvider>
     </>
   );
 }
