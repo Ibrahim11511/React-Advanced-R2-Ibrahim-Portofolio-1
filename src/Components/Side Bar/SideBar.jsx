@@ -34,12 +34,9 @@ export default function SiderBar() {
       </div>
 
       <div className="info">
-        <span className="userName">
-          Jackson <br />
-          Ford
-        </span>
+        <span className="userName">Jackson Ford</span>
         <p className="userJopTitle">
-          <a href="#">UI/UX/DESIGNER </a>
+          <span href="#">UI/UX/DESIGNER </span>
           IN PHILIPPINES
         </p>
       </div>

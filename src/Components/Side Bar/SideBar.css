@@ -124,9 +124,12 @@ aside .info {
 }
 
 aside .info .userName {
+    display: block;
     font-size: 25px;
     font-weight: 700;
     text-align: center;
+    width: 100%;
+    margin: auto;
     font-family: 'Playfair Display', Georgia, serif;
 }
 
@@ -135,9 +138,11 @@ aside .info .userJopTitle {
     font-size: 15px;
     font-weight: 200;
     margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 
-aside .info .userJopTitle a {
+aside .info .userJopTitle span {
     color: var(--links-color);
     font-weight: 200;
 }
