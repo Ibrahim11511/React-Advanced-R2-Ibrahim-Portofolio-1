@@ -5,6 +5,11 @@ import "./SideBar.css";
 
 export default function SiderBar() {
   const [isActive, setActive] = useState(true);
+  const [activeLink, setActiveLink] = useState("home");
+
+  function handleLinkClick(link) {
+    setActiveLink(link);
+  }
 
   function handelActive() {
     setActive(!isActive);
@@ -31,21 +36,49 @@ export default function SiderBar() {
 
       <ul>
         <li>
-          <Link className="active" to={"home"}>
+          <Link
+            className={activeLink === "home" ? "active" : ""}
+            to={"home"}
+            onClick={() => handleLinkClick("home")}
+          >
             home
           </Link>
         </li>
         <li>
-          <Link to={"about"}>about</Link>
+          <Link
+            className={activeLink === "about" ? "active" : ""}
+            to={"about"}
+            onClick={() => handleLinkClick("about")}
+          >
+            about
+          </Link>
         </li>
         <li>
-          <Link to={"skills"}>skills</Link>
+          <Link
+            className={activeLink === "skills" ? "active" : ""}
+            to={"skills"}
+            onClick={() => handleLinkClick("skills")}
+          >
+            skills
+          </Link>
         </li>
         <li>
-          <Link to={"experience"}>EXPERIENCE</Link>
+          <Link
+            className={activeLink === "experience" ? "active" : ""}
+            to={"experience"}
+            onClick={() => handleLinkClick("experience")}
+          >
+            EXPERIENCE
+          </Link>
         </li>
         <li>
-          <Link to={"work"}>work</Link>
+          <Link
+            className={activeLink === "work" ? "active" : ""}
+            to={"work"}
+            onClick={() => handleLinkClick("work")}
+          >
+            work
+          </Link>
         </li>
       </ul>
     </aside>
