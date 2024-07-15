@@ -7,34 +7,48 @@
     outline: none;
     border: none;
     list-style-type: none;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
 
-.home {
-    background-image: url(../../Images/img_bg_1-PzvG2r05.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    height: 100vh;
+.homePage {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    top: 0
-}
-
-.home.second {
-    background-image: url(../../Images/img_bg_2-DzCs5o-0.jpg);
-}
-
-.home .container {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    font-family: "Quicksand", sans-serif;
+}
+
+.homePage.first .firstPage,
+.homePage.second .secondPage {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.homePage.first .firstPage .imageContainer,
+.homePage.second .secondPage .imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.homePage.first .firstPage .imageContainer img,
+.homePage.second .secondPage .imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homePage.first .firstPage .content,
+.homePage.second .secondPage .content {
     position: absolute;
     left: 30%;
     top: 50%;
@@ -45,52 +59,39 @@
     -o-transform: translateY(-50%);
 }
 
-.home h1 {
-    font-size: 60px;
-    font-weight: 600;
+.homePage.first .firstPage .content h1,
+.homePage.second .secondPage .content h1 {
+    font-size: 55px;
     font-family: 'Playfair Display', Georgia, serif;
-    text-align: left;
+    margin-block: 20px;
 }
 
-.home p {
-    margin: 15px 0;
-    line-height: 25px;
-    text-transform: capitalize;
+.homePage.first .firstPage .content p,
+.homePage.second .secondPage .content p {
+    font-size: 20px;
+    margin-block: 20px;
 }
 
-.home p a {
+.homePage.first .firstPage .content p a,
+.homePage.second .secondPage .content p a {
     color: var(--links-color);
-    text-decoration: underline;
 }
 
-.home button {
-    background-color: transparent;
-    padding: 10px 25px;
-    border: 1px solid #000;
+.homePage.first .firstPage .content button,
+.homePage.second .secondPage .content button {
+    padding: 15px 30px;
+    font-size: 15px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    border: 1px solid #000;
     cursor: pointer;
+    background-color: transparent;
 }
 
+.homePage.first .secondPage {
+    display: none;
+}
 
-
-@media (max-width:1000px) {
-    .home {
-        width: 100%;
-    }
-
-    .home .container {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        text-align: center;
-        align-items: center;
-    }
-
-    .home h1 {
-        text-align: center;
-    }
+.homePage.second .firstPage {
+    display: none;
 }
