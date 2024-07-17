@@ -204,12 +204,8 @@ aside ul li:hover::after {
     }
 
     aside {
-        left: -100%;
+        left: 0%;
         width: 30%;
-    }
-
-    aside.show {
-        left: 0;
     }
 }
 

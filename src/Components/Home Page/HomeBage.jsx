@@ -34,7 +34,7 @@ export default function HomeBage() {
         </div>
         <div className="content">
           <h1>
-            Hi! <br />a Deigner
+            Hi! <br />I am Deigner
           </h1>
           <p>
             100% html5 bootstrap templates Made <br /> By
